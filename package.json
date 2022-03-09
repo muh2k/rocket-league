@@ -1,0 +1,23 @@
+{
+  "name": "rocket-league",
+  "version": "1.0.0",
+  "description": "a simple multi-purpose bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muh2k/rocket-league.git"
+  },
+  "author": "Muh2k & SirSloth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muh2k/rocket-league/issues"
+  },
+  "homepage": "https://github.com/muh2k/rocket-league#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "fs": "^0.0.1-security"
+  }
+}
