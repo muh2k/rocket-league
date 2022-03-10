@@ -1,11 +1,11 @@
 const client = require('../index.js');
 const activities = [
-  { name: "Rocket league bot", type: 'STREAMING' },
+  { name: "Rocket league", type: 'PLAYING' },
   { name: 'Sloth is cute', type: 'LISTENING' }
 ];
 
 client.on('ready', () => {
-  client.user.setPresence({ status: 'online', activity: activities[0] });
+  client.user.setPresence({ status: 'idle', activity: activities[0] });
   let activity = 1;
   setInterval(() => {
     activities[2] = { name: `${client.channels.cache.size} Channels`, type: 'WATCHING' };
