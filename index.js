@@ -1,7 +1,7 @@
 const {MessageEmbed, Collection, Client, Discord} = require('discord.js');
 const config = require('./config.json');
 const fs = require('fs');
-const { ERROR_LOGS_CHANNEL } = require("./config.json");
+const {ERROR_LOGS_CHANNEL} = require("./config.json");
 
 const client = new Client({
     intents: 32767
@@ -24,9 +24,32 @@ client.once('ready', () => {
     console.log(`${client.user.tag} is ready`)
   })
 
-
+  process.on("uncaughtException", (err) => {
+    console.log("Uncaught Exception: " + err);
   
-
+    const exceptionembed = new MessageEmbed()
+    .setTitle("Uncaught Exception")
+    .setDescription(`${err}`)
+    .setColor("RED")
+    client.channels.cache.get(ERROR_LOGS_CHANNEL).send({ embeds: [exceptionembed] })
+  });
+  
+  process.on("unhandledRejection", (reason, promise) => {
+    console.log(
+      "[FATAL] Possibly Unhandled Rejection at: Promise ",
+      promise,
+      " reason: ",
+      reason.message
+    );
+  
+     const rejectionembed = new MessageEmbed()
+    .setTitle("Unhandled Promise Rejection")
+    .addField("Promise", `${promise}`)
+    .addField("Reason", `${reason.message}`)
+    .setColor("RED")
+    client.channels.cache.get(ERROR_LOGS_CHANNEL).send({ embeds: [rejectionembed] })
+  });
+  
 
 client.login(config.MyMumIsScary).then(() => {
     console.log(
