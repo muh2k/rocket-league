@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/muh2k/rocket-league#readme",
   "dependencies": {
+    "ascii-table": "^0.0.9",
+    "cpu-stat": "^2.0.1",
     "discord.js": "^13.6.0",
-    "fs": "^0.0.1-security"
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2"
   }
 }
