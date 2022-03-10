@@ -1,5 +1,5 @@
 # About this bot
-I created this bot conjoint with (SirSloths)[https://github.com/SlothsAreLazyTho] bot 
+I created this bot conjoint with (SirSloths)[https://github.com/SlothsAreLazyTho/] bot 
 
 #How to run this bot.
 In config.json enter your token in the MyMumIsScary parameter 
