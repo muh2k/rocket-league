@@ -11,4 +11,4 @@ the channel which you want the errors to go to in ERROR_LOGS_CHANNEL < not curre
 
 And your owner id in the OWNER_PARAMETER 
 
-#this bot was created by Muh2k and will continue to be developed 
+#this bot was created by Muh2k and will not continue to be developed 
